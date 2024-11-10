@@ -10,7 +10,7 @@ const port = 3000;
 const users = [
     {
         username: 'admin',
-        password: '$2b$10$QZPp.n6j/8nHpFMo2FUVX.iPmU8e6TjWXLrWTbZzIjsX6mVD0cH5W', // bcrypt hash untuk 'password123'
+        password: '$2b$10$uWBQgELESyXuozAIGKUpPeK6ld0cr5XrLSDaLvGhzNq8mgk8Fc4XO', // bcrypt hash untuk 'password123'
         role: 'admin'
     }
 ];
