@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Suksema Coffee</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/trasp.png" alt="Suksema Coffee Logo" class="logo-image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <h1>Our Menu</h1>
+        <div class="menu-categories">
+            <button class="menu-button active" onclick="filterMenu('all')">All</button>
+            <button class="menu-button" onclick="filterMenu('coffee')">Coffee</button>
+            <button class="menu-button" onclick="filterMenu('tea')">Tea</button>
+            <button class="menu-button" onclick="filterMenu('makanan')">Makanan</button>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item coffee">
+                <img src="assets/coffee-frappe1.png" alt="Coffee Frappe">
+                <h2>Es kopi kodya</h2>
+                <p>Rich and creamy cold coffee with a smooth finish.</p>
+                <div class="price-and-button">
+                    <span class="price">10k</span>
+                    <button class="order-btn" onclick="orderItem('Es kopi kodya')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item coffee">
+                <img src="assets/coffee-vanilla.png" alt="Coffee Vanilla">
+                <h2>Es kopi karamel</h2>
+                <p>Classic coffee with a touch of vanilla sweetness.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item tea">
+                <img src="assets/tea-green.png" alt="Green Tea">
+                <h2>Es kopi Rum</h2>
+                <p>Refreshing and soothing, perfect for relaxation.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item makanan">
+                <img src="assets/tea-green.png" alt="Green Tea">
+                <h2>Indomie bule</h2>
+                <p>Refreshing and soothing, perfect for relaxation.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item makanan">
+                <img src="assets/tea-green.png" alt="Green Tea">
+                <h2>Nasi aluh kodya</h2>
+                <p>Refreshing and soothing, perfect for relaxation.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item makanan">
+                <img src="assets/tea-green.png" alt="Green Tea">
+                <h2>Pecel</h2>
+                <p>Refreshing and soothing, perfect for relaxation.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <div class="menu-item makanan">
+                <img src="assets/tea-green.png" alt="Green Tea">
+                <h2>Indomie Goreng/kuah</h2>
+                <p>Refreshing and soothing, perfect for relaxation.</p>
+                <div class="price-and-button">
+                    <span class="price">12k</span>
+                    <button class="order-btn" onclick="orderItem('Coffee Frappe')">Order</button>
+                </div>
+            </div>
+            <!-- Add more menu items here -->
+        </div>
+    </section>
+
+    <script src="menu.js"></script>
+</body>
+</html>

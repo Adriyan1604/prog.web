@@ -1,0 +1,430 @@
+/* Animasi Slide dari Kanan ke Kiri (untuk Arrow Kanan) */
+/* Animasi Fade-In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* Elemen muncul dari bawah */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* Elemen menjadi stabil */
+}
+
+
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100%); /* Muncul dari kanan */
+  animation: slideInRight 0.5s forwards;
+}
+
+.slide-out-left {
+  opacity: 1;
+  animation: slideOutLeft 0.5s forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%); /* Keluar ke kiri */
+  }
+}
+
+/* Animasi Slide dari Kiri ke Kanan (untuk Arrow Kiri) */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100%); /* Muncul dari kiri */
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-out-right {
+  opacity: 1;
+  animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%); /* Keluar ke kanan */
+  }
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  background-image: url('assets/bg2.png'); /* Pastikan file bg2.png berada di folder assets */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 100px;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px; /* Mengatur lebar maksimum header */
+  display: flex;
+  justify-content: space-between; /* Menempatkan logo di kiri dan navbar di kanan */
+  align-items: center; /* Menjaga logo dan navbar sejajar secara vertikal */
+  padding: 10px 50px;
+}
+
+.logo-image {
+  width: 120px; /* Ukuran logo */
+  height: auto; /* Menjaga aspek rasio logo */
+  margin-left: -40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Menjadikan item navbar sebagai flex item */
+  gap: 20px; /* Memberikan jarak antar item navbar */
+  margin-top: -30px;
+  margin-right: -150px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-family: 'Madimi One', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: yellow; /* Ganti warna sesuai keinginan */
+  border-bottom: 2px solid yellow; /* Garis bawah pada link aktif */
+}
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 0px;
+  margin-left: -80px
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h2 {
+  font-family: "Fredoka", sans-serif;
+  font-size: 85px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 70px;
+}
+
+.underline {
+  width: 320px; /* Sesuaikan panjang garis */
+  height: 3px; /* Ketebalan garis */
+  background-color: #c49a6c; /* Warna garis */
+  margin-top: 10px;
+}
+
+
+.icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: left;
+  gap: 20px; /* Jarak antar ikon */
+  margin-bottom: 0px; /* Jarak antara ikon dan teks di bawahnya */
+}
+
+.icon {
+  width: 30px; /* Ukuran ikon */
+  height: auto;
+}
+
+
+.subheading {
+  margin-top: 20px;
+  font-family: 'Mallanna', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.description {
+  margin-top: -5px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 25px;
+  font-size: 15px;
+  width: 300px; /* Atur lebar elemen */
+  white-space: normal; /* Izinkan pembungkusan */
+  word-wrap: break-word; /* Bungkus kata panjang */
+  overflow-wrap: break-word; /* Bungkus kata yang lebih panjang dari lebar elemen */
+  word-break: break-word; /* Pecah kata bila perlu */
+  margin-bottom: 0px;
+  
+}
+
+.order-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px; /* Memberikan jarak antara kotak media sosial dan tombol */
+  position: absolute;
+  margin-left: -145px;
+}
+
+.social-box {
+  position: fixed;
+  left: 0%;
+  top: 50%;
+  width: 50px;
+  height: 120px;
+  background-color: #c49a6c; /* Warna latar belakang */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Pusatkan konten di tengah kotak */
+  gap: 10px; /* Jarak antar ikon */
+}
+
+.social-icon {
+  font-size: 20px; /* Ukuran ikon */
+  color: #fff; /* Warna ikon */
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Efek zoom saat ikon di-hover */
+}
+
+.order-btn {
+  margin-top: 20px;
+  margin-left: -5px;
+  padding: 15px 30px;
+  font-family: 'Mukta', sans-serif;
+  background-color: #AF8B65;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.order-btn:hover {
+  background-color: #d8ae89;
+}
+
+.hero-image {
+  position: relative;
+  margin-right: -150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+  left: -60px;
+}
+
+.right-arrow {
+  right: -60px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  color: #fff;
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.about-us h2 {
+  font-family: 'Ephesis', cursive;
+  font-size: 48px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Mengatur gambar dalam 5 kolom */
+  gap: 10px; /* Jarak antar gambar */
+  margin-bottom: 40px;
+}
+
+.about-gallery img {
+  width: 100%; /* Gambar memenuhi lebar kolom */
+  height: 180px; /* Tinggi gambar konsisten */
+  object-fit: cover; /* Memotong gambar agar sesuai tanpa mengubah proporsi */
+  border-radius: 10px; /* Sudut melengkung pada gambar */
+}
+
+
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Amatic SC', cursive;
+}
+
+.about-card.penilaian-card {
+  grid-column: span 3; /* Membuat kotak ini mencakup seluruh kolom */
+  padding: 20px;
+  background-color: #444; /* Warna latar belakang */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 10px; /* Tambahan: Membuat sudut melengkung */
+}
+
+/* Penyesuaian untuk Progress Bar */
+.reviews p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #AF8B65; /* Warna progress */
+  border-radius: 5px;
+}
+
+
+.about-card {
+  background-color: #444;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-family: 'Amatic SC', cursive;
+}
+
+.about-card h3 {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  color: #AF8B65;
+  margin-bottom: 15px;
+}
+
+
+
+.about-card .reviews p {
+  font-size: 20px;
+  color: #ddd;
+  line-height: 1.6;
+  font-family: 'Caveat', cursive;
+}
+
+.highlighted-card {
+  border: 2px solid #AF8B65;
+  padding: 20px;
+}
+
+.rating {
+  font-size: 36px;
+  font-weight: bold;
+  color: #AF8B65;
+  margin-bottom: 15px;
+}
+
+.about-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
